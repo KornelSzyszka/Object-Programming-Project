@@ -1,4 +1,4 @@
-package org.example;
+package com.simulation.projekt;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -22,6 +22,31 @@ public class Cell implements IEvents{
         this.metabolism = metabolism;
         this.isSaprobiont = isSaprobiont;
     }
+
+    public int getFertility() {
+        return fertility;
+    }
+
+    public int getLifeExpectancy() {
+        return lifeExpectancy;
+    }
+
+    public double getTemperatureResistance() {
+        return temperatureResistance;
+    }
+
+    public double getPollutionResistance() {
+        return pollutionResistance;
+    }
+
+    public double getMetabolism() {
+        return metabolism;
+    }
+
+    public boolean isSaprobiont() {
+        return isSaprobiont;
+    }
+
     public Cell division(){
 
         double[] params;

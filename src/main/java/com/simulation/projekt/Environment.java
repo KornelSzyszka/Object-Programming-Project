@@ -1,4 +1,4 @@
-package org.example;
+package com.simulation.projekt;
 import java.util.Random;
 
 public class Environment implements IEvents{

@@ -1,4 +1,4 @@
-package org.example;
+package com.simulation.projekt;
 
 public interface IEvents {
     void randomEvents();

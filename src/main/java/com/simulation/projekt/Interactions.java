@@ -1,4 +1,4 @@
-package org.example;
+package com.simulation.projekt;
 
 public class Interactions {
     public static void cellHabitability(Cell cell, Environment env){
