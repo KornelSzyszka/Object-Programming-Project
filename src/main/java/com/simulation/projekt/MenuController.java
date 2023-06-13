@@ -50,13 +50,14 @@ public class MenuController {
     }
 
     @FXML
-    protected void onActionStartSimulation() throws IOException {
+    public void onActionStartSimulation() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sim.fxml"));
+
         Stage simulation_workspace = new Stage();
+        simulation_workspace.setScene(new Scene(fxmlLoader.load(), 803, 536));
         simulation_workspace.setResizable(false);
         simulation_workspace.sizeToScene();
-        simulation_workspace.setScene(new Scene(fxmlLoader.load(), 803, 536));
-        simulation_workspace.setTitle("Symulacja...");
+        simulation_workspace.setTitle("Simulation");
         simulation_workspace.show();
     }
 

@@ -8,22 +8,22 @@
 
 <FlowPane fx:id="flowPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.simulation.projekt.SimulationController">
    <children>
-      <Button mnemonicParsing="false" style="-fx-background-color: lightgrey; -fx-border-color: grey;" text="Rerun" underline="true">
+      <Button fx:id="rerun_btn" mnemonicParsing="false" onAction="#onActionRerun" onMouseEntered="#onHoverHighlightRerun" onMouseExited="#onHoverDefaultRerun" style="-fx-border-color: lightgreen; -fx-background-color: lightgrey;" text="Rerun">
          <FlowPane.margin>
             <Insets left="30.0" />
          </FlowPane.margin>
       </Button>
-      <Button mnemonicParsing="false" text="Wykresy danych">
+      <Button fx:id="chart_btn" mnemonicParsing="false" onMouseEntered="#onHoverHighlightChart" onMouseExited="#onHoverDefaultChart" style="-fx-background-color: lightgrey;" text="Wykresy danych">
          <FlowPane.margin>
             <Insets bottom="30.0" left="30.0" top="30.0" />
          </FlowPane.margin>
       </Button>
-      <Button mnemonicParsing="false" text="Wizualizacja (beta)">
+      <Button fx:id="visualise_btn" mnemonicParsing="false" onMouseEntered="#onHoverHighlightVisualise" onMouseExited="#onHoverDefaultVisualise" style="-fx-background-color: lightgrey;" text="Wizualizacja (beta)">
          <FlowPane.margin>
             <Insets left="30.0" />
          </FlowPane.margin>
       </Button>
-      <Button mnemonicParsing="false" text="Legenda">
+      <Button fx:id="legend_btn" mnemonicParsing="false" onMouseEntered="#onHoverHighlightLegend" onMouseExited="#onHoverDefaultLegend" style="-fx-background-color: lightgrey;" text="Legenda">
          <FlowPane.margin>
             <Insets left="30.0" />
          </FlowPane.margin>
@@ -38,7 +38,7 @@
             <TableColumn fx:id="columnIsSaprobiont" minWidth="7.2000732421875" prefWidth="119.20001220703125" text="Saprobiont" />
         </columns>
       </TableView>
-      <Button layoutX="40.0" layoutY="40.0" mnemonicParsing="false" text="Powrót do menu" textAlignment="CENTER">
+      <Button fx:id="menu_btn" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" onAction="#onActionReturn" onMouseEntered="#onHoverHighlightMenu" onMouseExited="#onHoverDefaultMenu" style="-fx-background-color: lightgrey;" text="Powrót do menu" textAlignment="CENTER">
          <FlowPane.margin>
             <Insets left="30.0" top="10.0" />
          </FlowPane.margin>
