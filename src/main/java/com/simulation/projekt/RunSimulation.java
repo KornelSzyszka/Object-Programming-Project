@@ -63,14 +63,8 @@ public class RunSimulation {
     }
 
     public void startSimulation() {
-        // Create an instance of the SimulatorController
         SimulationController simulatorController = new SimulationController();
-
-        // Pass the SpeciesList to the SimulatorController
         simulatorController.setSpeciesList(SpeciesList);
-
-        // Start the simulation using the SimulatorController
-        // ...
     }
 
 }
