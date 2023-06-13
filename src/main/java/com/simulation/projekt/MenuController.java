@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -47,6 +48,17 @@ public class MenuController {
     @FXML
     public void onMouseExitedO(){
         options_btn.setStyle("-fx-background-color: lightgrey;");
+    }
+
+    @FXML
+    public void onActionOptions() throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("options.fxml"));
+        Stage options_window = new Stage();
+        options_window.setResizable(false);
+        options_window.initStyle(StageStyle.UTILITY);
+        options_window.setScene(new Scene(fxmlLoader.load(), 600, 400));
+        options_window.setTitle("Options");
+        options_window.show();
     }
 
     @FXML

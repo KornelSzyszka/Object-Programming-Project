@@ -66,6 +66,7 @@ public class SimulationController implements Initializable{
     public ObservableList<Cell> list = FXCollections.observableArrayList();
     public void setSpeciesList(ArrayList<Cell> speciesList) { list.addAll(speciesList); }
 
+
     public static RunSimulation run(){
         RunSimulation firstSimulation = new RunSimulation();
         firstSimulation.setParameters();
@@ -77,24 +78,13 @@ public class SimulationController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //simulation starter
-       /* RunSimulation firstSimulation = new RunSimulation();
-        firstSimulation.setParameters();
-        firstSimulation.firstPhase();
-        firstSimulation.secondPhase();
-        firstSimulation.startSimulation();*/
         run();
-
-        //columns of data
         columnFertility.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getFertility()).asObject());
         columnLifespan.setCellValueFactory(data -> new SimpleIntegerProperty(data.getValue().getLifeExpectancy()).asObject());
         columnPreferredTemperature.setCellValueFactory(data -> new SimpleDoubleProperty(data.getValue().getTemperatureResistance()).asObject());
         columnPollutionResistance.setCellValueFactory(data -> new SimpleDoubleProperty(data.getValue().getPollutionResistance()).asObject());
         columnMetabolism.setCellValueFactory(data -> new SimpleDoubleProperty(data.getValue().getMetabolism()).asObject());
-
         columnIsSaprobiont.setCellValueFactory(data -> new SimpleBooleanProperty(data.getValue().isSaprobiont()));
-
-        //setting items to table
         list.addAll(run().getList());
         cellTableView.setItems(list);
 

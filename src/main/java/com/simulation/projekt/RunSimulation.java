@@ -5,15 +5,15 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 
 public class RunSimulation {
+
     int firstPhaseTimer = 60;
     int secondPhaseTimer = 240;
-    Environment simulation = new Environment(30, 0, 7);
-    Cell firstCell = new Cell(70, 5, 30, 50, 2, false);
+    public Environment simulation = new Environment(30,0,7);
     public ArrayList<Cell> SpeciesList = new ArrayList<>();
     public void setParameters() {
         this.SpeciesList.add(this.firstCell);
     }
-
+    Cell firstCell = new Cell(70, 5, 30, 50, 2, false);
     public ArrayList<Cell> getList(){
         return SpeciesList;
     }
@@ -63,6 +63,7 @@ public class RunSimulation {
     }
 
     public void startSimulation() {
+
         SimulationController simulatorController = new SimulationController();
         simulatorController.setSpeciesList(SpeciesList);
     }
