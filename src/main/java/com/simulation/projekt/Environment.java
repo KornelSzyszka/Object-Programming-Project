@@ -10,7 +10,7 @@ public class Environment implements IEvents{
     private final double nightTimeLength = 2*dayTimeLength;
     private final Random roll = new Random();
 
-    public Environment(double temperature, int pollution, int dayTimeLength){
+    public Environment(double temperature, double pollution, int dayTimeLength){
         this.temperature = temperature;
         this.pollution = pollution;
         this.dayTimeLength = dayTimeLength;

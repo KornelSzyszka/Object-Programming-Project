@@ -11,9 +11,9 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("menu.fxml"));
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource("sim.fxml"));
+        //FXMLLoader loader = new FXMLLoader(Main.class.getResource("sim.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        loader.getController();
+        //loader.getController();
 
         stage.setTitle("Symulacja rozwoju komórek");
         stage.setScene(scene);
