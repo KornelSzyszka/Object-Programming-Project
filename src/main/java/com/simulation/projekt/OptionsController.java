@@ -2,12 +2,15 @@ package com.simulation.projekt;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.net.URL;
@@ -25,9 +28,9 @@ public class OptionsController implements Initializable {
 
     @FXML private Button saveOptions;
 
-    private int temperature;
-    private double pollution;
-    private int dayTimeLength;
+    private static int temperature;
+    private static double pollution;
+    private static int dayTimeLength;
 
     public int getTemperature(){
         return this.temperature;
@@ -47,6 +50,8 @@ public class OptionsController implements Initializable {
         System.out.println("t: " + temperature);
         System.out.println("p: " + pollution);
         System.out.println("time: " + dayTimeLength);
+        Stage stage = (Stage)saveOptions.getScene().getWindow();
+        stage.close();
     }
 
 

@@ -8,7 +8,8 @@ public class RunSimulation {
 
     int firstPhaseTimer = 60;
     int secondPhaseTimer = 240;
-    public Environment simulation = new Environment(30,0,7);
+    OptionsController envParams = new OptionsController();
+    public Environment simulation = new Environment(envParams.getTemperature(),envParams.getPollution(),envParams.getDayTimeLength());
     public ArrayList<Cell> SpeciesList = new ArrayList<>();
     public void setParameters() {
         this.SpeciesList.add(this.firstCell);
@@ -20,6 +21,7 @@ public class RunSimulation {
 
 
     public void firstPhase() {
+        System.out.println("\n" + simulation.temperature + "\n" + simulation.pollution + "\n" + simulation.dayTimeLength);
         for (int timer = 0; timer < this.firstPhaseTimer; timer++) {
             this.simulation.periodicEvents(timer);
             this.simulation.randomEvents();
